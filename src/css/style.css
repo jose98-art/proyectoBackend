@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=East+Sea+Dokdo&family=Yeon+Sung&display=swap');
+:root{
+    --blanco:rgb(255,255,255);
+    --negro:rgb(0,0,0);
+    --verde:#276967;
+    --textStyle:'Bebas Neue', cursive;
+    --textStyle2:'East Sea Dokdo', cursive;
+    --textStyle3:'Advent Pro', sans-serif;
+    --textStyle4:'Yeon Sung', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*NavBar*/
+.containtNavBar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--blanco);
+}
+.containtNavBar a{
+    text-decoration: none;
+    color: rgb(195, 54, 54);
+}
+.ContaintnavLogo{
+    width: 10%;
+    height: 100%;
+}
+.textLogo{
+    font-family: var(--textStyle2);
+    font-size: 1.3em;
+}
+
+.ContaintnavLogo a > img{
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.containtnavlink{
+    width: 70%;
+    height: 50%;
+    margin: none;
+}
+.containtnavlink > ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--negro);
+} 
+.containtnavlink > ul li a{
+    list-style: none;
+    font-family: var(--textStyle);
+    font-size: 1em;
+    letter-spacing: 3px;
+    cursor: pointer;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.containtnavlink2{
+    width: 20%;
+    height: 50%;
+}
+.containtnavlink2 > ul {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.containtnavlink2 > ul li a{
+    list-style: none;
+    color: var(--blanco);
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.containtnavlink > ul li, .containtnavlink2 > ul li{
+    transition: .5s;
+
+}
+.containtnavlink > ul li:hover, .containtnavlink2 > ul li:hover{
+    transform: scale(1.1);
+}
+
+/*CARRUCEL*/
+.containtSlider{
+    width: 100%;
+    height: 820px;
+    background:linear-gradient(90deg,rgb(200, 17, 224),40%,rgb(2, 217, 255)),50%;
+    margin:65px auto;
+    position: absolute;
+    z-index: 2;
+}
+.subContaintSlider{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.slide{
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+.slide.active{
+    opacity: 1;
+}
+.imagenesSlider{
+    width: 100%;
+    height: 770px;
+    object-fit: contain;
+} 
+.sobreFondo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+/*FOOTER*/
+.containtFooter{
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--negro);
+    color: var(--blanco);
+    z-index: 10;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.containtIconFooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.containtIconFooter > ul{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.containtIconFooter > ul li{
+    list-style: none;
+}
+.containtIconFooter > ul li i{
+    font-size: 1.5em;
+    transition: .5s;
+}
+.containtIconFooter > ul li i:hover{
+    transform: scale(1.3);
+}
+/*CONTENIDO*/
+.marginTop{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 170px;
+}
+.containerProductos{
+    width: 88%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 70px;
+    padding-top: 20px;
+    padding-bottom: 120px;
+    margin-bottom: 110px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.containerCard{
+     width: 250px;
+    height: 360px;
+    border-radius: 5px;
+    background: #fcfcfc;
+    box-shadow:  27px 27px 54px #d9d9d9,
+                 -27px -27px 54px #ffffff;
+    padding: 10px;
+}
+.containerImag{
+     width: 80%;
+    height: 55%;
+    margin: auto auto 10px auto;
+    transition: .5s all;
+}
+.containerImag:hover{
+    transform: scale(1.1);
+}
+.containerImag img{
+     width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+}
+.containerDate{
+     width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+    font-family: var(--textStyle);
+    color: var(--negro);
+}
+.linkVer{
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: rgb(248, 246, 246);
+    background-color: var(--verde);
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: .5s ;
+}
+.linkVer:hover{
+    transform: scale(1.2);
+}
+/*SIDERBAR*/
+.containerSider{
+    margin-top:65px ;
+    width: 150px;
+    height: 810px;
+    position: fixed;
+}
+.siderBar{
+    width: 100%;
+    height: 100%;
+    background-color: var(--blanco);
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.containtList{
+    width: 70%;
+    height: 15%;
+    font-size: 1rem;
+    font-family: var(--textStyle3);
+    font-weight:700;
+    text-align: center;
+}
+.sideList{
+    height: 80%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.sideList li{
+    list-style: none;
+    font-size: .8rem;
+    font-weight: 100;
+    margin: 3px;
+
+}
+.sideList li a{
+    text-decoration: none;
+    color: var(--negro);
+    transition: .2s;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+.sideList li a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+/*DETALLES*/
+.cajaCardProduct{
+    width: 90%;
+    height: 80%;
+}
+.cardProduct{
+    width: 100%;
+    border-radius: 10px ;
+    box-shadow:  27px 27px 54px #d9d9d9,
+                 -27px -27px 54px #ffffff;
+    height:750px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px auto auto auto;
+}
+.cardImg{
+    width: 50%;
+    height: 90%;
+    border-right: 5px solid rgb(30, 187, 211);
+}
+.cardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.infoCard{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inputTallas{
+    width: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.inputTallas > label{
+    margin-left: 5px;
+    font-family: var(--textStyle);
+    letter-spacing: 2px;
+}
+.inputTallas > label input{
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+/*CARRITO*/
+.containtCarrito{
+    width: 90%;
+}
+.cajaMessag{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 170px;
+    border-radius: 10px;
+}
+.cajaMessag h1{
+    font-size: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #08a8ff;
+    background-color: rgb(7, 6, 6);
+    padding: 0 100px;
+    border-radius: 15px;
+    letter-spacing: 5px;
+}
+.cajaMessag .carritoReturn{
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#08a8ff;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+.submenu{
+    background-color: rgb(226, 29, 29);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px auto;
+}
+.containerCarrito{
+    width: 90%;
+    height: auto;
+    margin:  auto auto;
+}
+.carContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px auto;
+}
+.carImagen .imgCompra{
+    width: 50%;
+    height: 100%;
+}
+.carImagen .imgCompra p{
+    font-size: .8em;
+}
+.imgCompra img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+.casillas{
+    width: 25%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.containtPagar{
+    margin-top: 10px;
+    margin-bottom: 150px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pagarOVaciar{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: #b8293d;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+/*COUNT*/
+.btnCaja{
+    width: 30%;
+    height: 15%;
+}
+.cajabtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50%;
+}
+.cajabtn .btn{
+    width: 40%;
+    height: 70%;
+    font-size: 1.5em;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(201, 237, 245);
+    backdrop-filter: blur(20px);
+    transition: .4s;
+}
+.cajabtn .btn:hover, .btnVer:hover, .btnLin:hover{
+    background-color: rgb(167, 228, 242) ;
+    color: var(--negro);
+}
+.cajabtn .countNumber{
+    font-size: 1.3em;
+}
+.btnVer{
+    width: 100%;
+    height: 30%;
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-family: var(--textStyle);
+    letter-spacing: 1px;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(30, 187, 211);
+    color: var(--blanco);
+    transition: .4s;
+    border: none;
+}
+.btnLin{
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--negro);
+    font-family: var(--textStyle);
+    background-color: rgb(30, 187, 211);
+    transition: .4s;
+
+}
